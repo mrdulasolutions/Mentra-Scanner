@@ -2,7 +2,7 @@
 
 This document is for engineers building, extending, or shipping **Mentra Scanner**. User-facing steps live in [README.md](README.md). Mentra-specific integration is in [SDK.md](SDK.md).
 
-**License:** Apache 2.0 — **M.R. Dula Enterprise, LLC** ([LICENSE](LICENSE)).
+**License:** Our original work — Apache 2.0 — **M.R. Dula Enterprise, LLC** ([LICENSE](LICENSE)). Third-party terms: [LICENSING.md](LICENSING.md).
 
 ---
 

@@ -2,7 +2,8 @@
 
 **Mentra Scanner** is an iPhone app for **Mentra Live** smart glasses. It connects over Bluetooth, receives live video over **Wi‑Fi (WHIP/WebRTC)**, and automatically saves **stream frames** when QR codes and shipping barcodes sit in view—plus parsed label fields—on device.
 
-Licensed under **Apache 2.0** by [M.R. Dula Enterprise, LLC](LICENSE).
+**Copyright:** Original code and docs in this repo — [M.R. Dula Enterprise, LLC](LICENSE) ([Apache 2.0](LICENSE)).  
+**Third parties:** Mentra Bluetooth SDK (Apache 2.0), GStreamer (LGPL), Apple SDKs — see [LICENSING.md](LICENSING.md) and [NOTICE](NOTICE). Mentra Scanner is an independent app, not an official Mentra product.
 
 ---
 
@@ -66,7 +67,7 @@ The phone runs a local **WHIP receiver** (GStreamer + header proxy). The Mentra 
 
 ```
 .
-├── LICENSE / NOTICE          # Apache 2.0 — M.R. Dula Enterprise, LLC
+├── LICENSE / NOTICE / LICENSING.md / THIRD_PARTY_LICENSES.md
 ├── README.md                 # You are here
 ├── DEVELOPER.md              # Build, debug, conventions
 ├── SDK.md                    # Mentra SDK + our bolt-ons
