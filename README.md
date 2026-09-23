@@ -1,8 +1,6 @@
 # Mentra Scanner
 
-**Mentra Scanner** is an iPhone app for **Mentra Live** smart glasses. It connects over Bluetooth, receives live video over **Wi‑Fi (WHIP/WebRTC)**, and automatically saves **stream frames** when QR codes and shipping barcodes sit in view—plus parsed label fields—on device.
-
-**Copyright:** Original code and docs — [M.R. Dula Enterprise, LLC](LICENSE) ([Apache 2.0](LICENSE)). Third-party attributions: [NOTICE](NOTICE). Mentra Scanner is an independent app, not an official Mentra product.
+Mentra Scanner is an iPhone app for **Mentra Live** glasses. It pairs over Bluetooth, pulls live video over Wi‑Fi (WHIP/WebRTC), and saves frames when a QR code or shipping barcode stays steady in view. Parsed label fields land on your phone as JPEG files and SQLite records. This is an independent app—not an official Mentra product.
 
 ---
 
@@ -10,101 +8,72 @@
 
 | Item | Notes |
 |------|--------|
-| **iPhone** | iOS 16+, physical device (not Simulator—video stack requires device) |
+| **iPhone** | iOS 16 or later. Use a real phone; the Simulator cannot run the glasses video path. |
 | **Xcode** | 15+ recommended |
-| **Mentra Live glasses** | Firmware aligned with [Mentra Bluetooth SDK](https://docs.mentraglass.com/bluetooth-sdk/overview) **3.1.1+** (see `MentraQR/project.yml`) |
-| **Wi‑Fi** | Phone and glasses on the **same network**; no AP client isolation blocking phone ↔ glasses |
+| **Mentra Live** | Firmware aligned with [Mentra Bluetooth SDK](https://docs.mentraglass.com/bluetooth-sdk/overview) **3.1.1+** (see `MentraQR/project.yml`) |
+| **Wi‑Fi** | Phone and glasses on the same network, and that network has to let them talk to each other. |
 
-First Xcode build downloads the **GStreamer iOS SDK** via `MentraQR/scripts/setup-gstreamer-ios.sh`. The app links GStreamer **statically**—do not embed `GStreamer.framework` in the bundle.
-
----
-
-## Quick start (operators)
-
-1. **Install** the app on your iPhone (Xcode → Run, or your MDM/TestFlight flow).
-2. Open **Connect** → pair your glasses.
-3. Open **Settings → Wi‑Fi** → put glasses on the same network as the phone; confirm the match banner is green.
-4. Open **Scan** → tap **Start** for live view.
-5. Point at a **QR or barcode** in the on-screen guide; captures save automatically (toast + haptic). Full history is under **Captures**.
-
-**Bottom bar on Scan**
-
-| Button | Action |
-|--------|--------|
-| **Start / Stop** | Begin or end live WHIP scanning |
-| **Save** | Save the current frame manually |
-| **Clear** | Clear the on-screen “last capture” preview (files in Captures stay) |
-
-**Toolbar:** fill light toggle (glasses RGB LED when supported).
+Your first Xcode build runs `MentraQR/scripts/setup-gstreamer-ios.sh` and downloads the **GStreamer iOS SDK**. The app links GStreamer **statically**—do not embed `GStreamer.framework` in the bundle.
 
 ---
 
-## Quick start (developers)
+## Run it on your phone
+
+1. Install the app (Xcode → Run, or your MDM/TestFlight flow).
+2. **Connect** → pair your glasses.
+3. **Settings → Wi‑Fi** → join the same network as the phone; wait for the green match banner.
+4. **Scan** → tap **Start** for live view.
+5. Aim a QR or barcode inside the on-screen guide. When the code is stable, the app captures automatically (toast + haptic). Open **Captures** for the full history.
+
+On the Scan screen, **Start / Stop** runs WHIP scanning, **Save** grabs the current frame by hand, and **Clear** only clears the on-screen preview—saved files stay in Captures. The toolbar fill-light toggle drives the glasses RGB LED when supported.
+
+---
+
+## Open the project (developers)
 
 ```bash
 cd MentraQR
-brew install xcodegen   # optional; repo includes MentraQR.xcodeproj
-xcodegen generate       # refresh project from project.yml if you changed it
+brew install xcodegen   # optional; the repo already includes MentraQR.xcodeproj
+xcodegen generate       # only if you changed project.yml
 open MentraQR.xcodeproj
 ```
 
-Select your **Development Team** in Xcode (or set `developmentTeam` in `MentraQR/project.yml` and regenerate).
-
-Build and run on a **connected iPhone**.
-
-More detail: [DEVELOPER.md](DEVELOPER.md) · Mentra integration: [SDK.md](SDK.md) · Plans: [ROADMAP.md](ROADMAP.md)
+Pick your **Development Team** in Xcode (or set `developmentTeam` in `MentraQR/project.yml` and regenerate). Build and run on a connected iPhone.
 
 ---
 
-## How it works (one paragraph)
+## What happens when you scan
 
-The phone runs a local **WHIP receiver** (GStreamer + header proxy). The Mentra SDK **`startStream`** sends glasses video to that endpoint. Each frame is decoded with **Apple Vision** (barcodes + OCR), auto-saved through **`FrameScanDecoder`** / **`LabelSnapshotProcessor`**, and stored as **JPEG + SQLite** via **`LabelCaptureStore`**. The live stream **stays up** during capture—no glasses still-photo pipeline on the main path.
+The phone listens for the glasses’ live video. When a code sits still in the guide, the app grabs that frame, reads the barcode (and label text, if you turned that on in Settings), and saves a JPEG plus the parsed fields. The stream stays up the whole time. You are not pausing for a separate photo.
+
+Those images and fields stay on the phone. Nothing is uploaded unless you add that later.
 
 ---
 
-## Repository layout
+## Where to go next
+
+- **[DEVELOPER.md](DEVELOPER.md)** — build details, debugging, code map, conventions  
+- **[SDK.md](SDK.md)** — how we use the Mentra Bluetooth SDK and what we built around it  
+- **[ROADMAP.md](ROADMAP.md)** — what’s shipped vs planned  
 
 ```
 .
 ├── LICENSE / NOTICE
-├── README.md                 # You are here
-├── DEVELOPER.md              # Build, debug, conventions
-├── SDK.md                    # Mentra SDK + our bolt-ons
-├── ROADMAP.md                # Shipped vs planned
+├── README.md
+├── DEVELOPER.md
+├── SDK.md
+├── ROADMAP.md
 └── MentraQR/
-    ├── MentraQR/             # iOS app sources
-    ├── scripts/              # GStreamer setup, Vision probes, Laya eval
-    ├── docs/                 # Deep dives (e.g. Laya)
-    └── project.yml           # XcodeGen spec
+    ├── MentraQR/       # iOS app sources
+    ├── scripts/      # GStreamer setup, Vision probes, Laya eval
+    ├── docs/           # Deep dives (e.g. Laya)
+    └── project.yml     # XcodeGen spec
 ```
+
+Questions and bugs can go in [GitHub Issues](https://github.com/mrdulasolutions/Mentra-Scanner/issues).
 
 ---
 
 ## Legal
 
-| | |
-|---|---|
-| **This repository** | [Apache License 2.0](LICENSE) — M.R. Dula Enterprise, LLC |
-| **Attributions** | [NOTICE](NOTICE) (required for redistribution) |
-
-**Third-party components** (separate licenses; summarized in NOTICE):
-
-- **Mentra Bluetooth SDK** — Swift Package at build time ([Apache 2.0](https://github.com/Mentra-Community/mentra-bluetooth-sdk-ios/blob/main/LICENSE)); pin in `MentraQR/project.yml`
-- **GStreamer** — installed by `MentraQR/scripts/setup-gstreamer-ios.sh`, statically linked ([LGPL](https://gstreamer.freedesktop.org/documentation/frequently-asked-questions/licensing.html)); LGPL obligations apply when you **distribute** a binary
-- **Apple iOS SDK** — system frameworks; Apple Developer Program terms
-
-Optional repo-only references (e.g. Laya eval scripts) are noted in NOTICE. Trademarks: “Mentra” and “Mentra Live” belong to their respective owners; use only to describe compatibility.
-
----
-
-## Privacy
-
-Scan images and parsed fields are stored **locally** in the app’s Application Support directory. Nothing is uploaded by default.
-
----
-
-## Support & contributions
-
-- Bugs and features: use your team’s issue tracker (GitHub Issues when this repo is published).
-- See [DEVELOPER.md](DEVELOPER.md) for logging, scripts, and code map.
-- Licensing: [LICENSE](LICENSE) · [NOTICE](NOTICE).
+Original code and documentation in this repository are **Copyright 2026 M.R. Dula Enterprise, LLC**, licensed under the [Apache License 2.0](LICENSE). Third-party components (Mentra Bluetooth SDK, GStreamer, Apple system frameworks, and others) have their own terms—see [NOTICE](NOTICE) before you redistribute a binary. “Mentra” and “Mentra Live” are trademarks of their respective owners; we use those names only to describe compatibility.
