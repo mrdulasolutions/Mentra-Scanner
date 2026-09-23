@@ -1,0 +1,15 @@
+{
+  "originHash" : "2d05b319ffab0b3a69168e3b8769aa9cef748b0029a1a0659ff11224b38e510a",
+  "pins" : [
+    {
+      "identity" : "mentra-bluetooth-sdk-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Mentra-Community/mentra-bluetooth-sdk-ios.git",
+      "state" : {
+        "revision" : "a1d26942f3bff35790cd6d89182bcb81bde7c195",
+        "version" : "3.1.1"
+      }
+    }
+  ],
+  "version" : 3
+}

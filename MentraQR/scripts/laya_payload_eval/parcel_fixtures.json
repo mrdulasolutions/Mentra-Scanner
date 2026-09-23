@@ -1,0 +1,22 @@
+[
+  {
+    "classification_text": "symbology: Code128 | text: 1Z999AA10123456784 | carrier: UPS | tracking: 1Z999AA10123456784",
+    "expect_kind": "other",
+    "expect_suspicious": false
+  },
+  {
+    "classification_text": "symbology: PDF417 | text: 961102000000000000000000000 | carrier: FedEx | tracking: 961102000000000000000000000",
+    "expect_kind": "other",
+    "expect_suspicious": false
+  },
+  {
+    "classification_text": "text: label: UPS GROUND TRACKING# 1Z999AA10123456784 | carrier: UPS | tracking: 1Z999AA10123456784",
+    "expect_kind": "other",
+    "expect_suspicious": false
+  },
+  {
+    "classification_text": "symbology: QR | text: https://login.evil.example/verify | label: URGENT VERIFY ACCOUNT",
+    "expect_kind": "web",
+    "expect_suspicious": true
+  }
+]

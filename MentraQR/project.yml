@@ -1,0 +1,50 @@
+name: MentraQR
+options:
+  bundleIdPrefix: com.local
+  # Persist signing team across `xcodegen generate` (was previously only in Xcode UI).
+  developmentTeam: PPY9K2BYJH
+  deploymentTarget:
+    iOS: "16.0"
+  createIntermediateGroups: true
+
+settings:
+  base:
+    DEVELOPMENT_TEAM: PPY9K2BYJH
+    SWIFT_VERSION: "5.9"
+    TARGETED_DEVICE_FAMILY: "1"
+    IPHONEOS_DEPLOYMENT_TARGET: "16.0"
+
+packages:
+  MentraBluetoothSDK:
+    url: https://github.com/Mentra-Community/mentra-bluetooth-sdk-ios.git
+    from: "3.1.1"
+
+targets:
+  MentraQR:
+    type: application
+    platform: iOS
+    sources:
+      - path: MentraQR
+    dependencies:
+      - package: MentraBluetoothSDK
+        product: MentraBluetoothSDK
+    settings:
+      base:
+        DEVELOPMENT_TEAM: PPY9K2BYJH
+        PRODUCT_BUNDLE_IDENTIFIER: com.local.mentraqr
+        PRODUCT_NAME: MentraQR
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        CODE_SIGN_ENTITLEMENTS: MentraQR/MentraQR.entitlements
+        INFOPLIST_FILE: MentraQR/Info.plist
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        SWIFT_OBJC_BRIDGING_HEADER: MentraQR/MentraQR-Bridging-Header.h
+        GSTREAMER_ROOT_IOS: "$(HOME)/Library/Developer/GStreamer/iPhone.sdk"
+        FRAMEWORK_SEARCH_PATHS: "$(inherited) \"$(GSTREAMER_ROOT_IOS)\""
+        HEADER_SEARCH_PATHS: "$(inherited) \"$(GSTREAMER_ROOT_IOS)/GStreamer.framework/Headers\""
+        OTHER_LDFLAGS: "$(inherited) -Wl,-no_compact_unwind -lresolv -liconv -lc++ -lsqlite3 -framework GStreamer -framework CoreFoundation -framework Foundation -framework AVFoundation -framework CoreMedia -framework CoreVideo -framework CoreAudio -framework AudioToolbox -framework AssetsLibrary -weak_framework VideoToolbox -framework OpenGLES -framework QuartzCore -framework UIKit"
+        LD_RUNPATH_SEARCH_PATHS: "$(inherited) @executable_path/Frameworks"
+    preBuildScripts:
+      - name: Install GStreamer iOS SDK
+        script: |
+          "${PROJECT_DIR}/scripts/setup-gstreamer-ios.sh"

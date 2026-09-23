@@ -1,0 +1,19 @@
+Mentra Scanner
+Copyright 2026 M.R. Dula Enterprise, LLC
+
+This product includes software developed by M.R. Dula Enterprise, LLC
+(Apache License 2.0). See LICENSE.
+
+Third-party components (separate licenses apply):
+
+- Mentra Bluetooth SDK for iOS — https://github.com/Mentra-Community/mentra-bluetooth-sdk-ios
+  Used under the SDK’s published license; see Mentra documentation.
+
+- GStreamer — https://gstreamer.freedesktop.org/
+  Used for WHIP/WebRTC video receive on iOS (LGPL; static linking — comply with
+  GStreamer distribution requirements when shipping binaries).
+
+- Apple frameworks — SwiftUI, Vision, AVFoundation, Core Bluetooth (system).
+
+Optional / eval paths in this repository may reference Laya (Apache-2.0) and
+community Core ML exports; model weights are not bundled by default.

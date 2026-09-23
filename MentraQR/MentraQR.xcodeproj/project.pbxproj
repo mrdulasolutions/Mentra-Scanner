@@ -1,0 +1,568 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02799BC963F90F71834CC116 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46D5A778416428CDD405712 /* RootView.swift */; };
+		057AD0DD4C736698EF866919 /* CGImage+JPEG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA6BB6BFF2140011F0E8A4E /* CGImage+JPEG.swift */; };
+		0A09FDE8B653DB776088FC59 /* AppDiagnostics.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33DEC1749FA200127F52385 /* AppDiagnostics.swift */; };
+		10C5063A466A49B39716A4BB /* MentraSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC119047111F6DFCFAF2A8F /* MentraSession.swift */; };
+		12EC161879B0D9884C3ADF6C /* GStreamerWhipReceiver.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C6D3B4B86E237B0C7506B0 /* GStreamerWhipReceiver.m */; };
+		16BA411D68B692311340240D /* MentraBluetoothSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 9A83449230FE663DF28D0B56 /* MentraBluetoothSDK */; };
+		16BF1B000729959D267894EA /* CaptureImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47454F29D6753D69E83ADF8 /* CaptureImageProcessor.swift */; };
+		1F2FD74C7B5417535CD9436E /* CaptureRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4C780E326A624E254731A2 /* CaptureRecord.swift */; };
+		20B43E077C98E372E6460093 /* ShippingBarcodeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42C95B213692A1EC3F4A9A1 /* ShippingBarcodeParser.swift */; };
+		228A09091F1CE0EF0524E701 /* MentraQRApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BE42084ABFBE5AD2E14884 /* MentraQRApp.swift */; };
+		26498624A481004D37860008 /* AdvancedFeaturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C996382F16EB73AAC03B2F9 /* AdvancedFeaturesView.swift */; };
+		2BDE0CCE03AEA00A92E1D0FE /* LabelSnapshotProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A62DE6066F2F00434C2BE18 /* LabelSnapshotProcessor.swift */; };
+		3DF8693408EBCBA5CEAAC104 /* WhipHeaderProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FC009D13D46E3FB0999F75 /* WhipHeaderProxy.swift */; };
+		48515F0D0D4076485CE3966B /* VisionFrameScaler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD22C574C8A3FFBC0B46C9C /* VisionFrameScaler.swift */; };
+		48688864413BF73972092E92 /* AppDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BEF53419DD6D048932C4C4 /* AppDesign.swift */; };
+		555859E62AD8FB209E1487AD /* ScanResultRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB80B949FCFF7CEBD2AF20B4 /* ScanResultRow.swift */; };
+		58B519C6131C09290B609D77 /* FrameScanDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82C6EBF49A8EB68DE3A5FD /* FrameScanDecoder.swift */; };
+		5B2B509062A563D38B354B7C /* CapturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FA84087103396B67E2B0FB /* CapturesView.swift */; };
+		5B3D8E23229BD84737EB610C /* LabelCaptureStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A961E1B2E6B4C2135293870B /* LabelCaptureStore.swift */; };
+		5B4F8AB73DDB535955E4225C /* LabelGuideOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A63EF580A0EEA8D1056DD3A /* LabelGuideOverlay.swift */; };
+		68D125F10E7F6C2953E78469 /* LabelScanROI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD183738789FA816913EFD6C /* LabelScanROI.swift */; };
+		6BD46FFA8131796EE7F3AFDC /* LocalPhotoWebhookReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA28F679D4BDD9243C461FDE /* LocalPhotoWebhookReceiver.swift */; };
+		74D1B44AFA61DDF60D330661 /* FindingLabelTaxonomy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9380AB025B4841008FC5E8DD /* FindingLabelTaxonomy.swift */; };
+		76B8B76A320F910E60DD80FE /* LocalNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FD8FA76ACA69FCF4247D85 /* LocalNetwork.swift */; };
+		81D3E8E3A1130B437E56CC68 /* CaptureScanProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5BC0BD4C53AA466387EB7 /* CaptureScanProcessor.swift */; };
+		8ABF19B460B145608015FA8A /* PayloadURLShaping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8063D7DF8E5B260B172B0AEF /* PayloadURLShaping.swift */; };
+		8AE361EA134C0622C3D06FCB /* StreamPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8ECDF418E4AB68AC6206AB /* StreamPreviewView.swift */; };
+		902C14A7E20C1AD2CC0F1BF2 /* LabelCaptureLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = F561913479A0DC9CD9562693 /* LabelCaptureLibrary.swift */; };
+		96F0B556D40332C10ADF21BF /* WiFiMatchBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D744F6B8959A0A745027F8C1 /* WiFiMatchBanner.swift */; };
+		97EB5847879A893335BD0133 /* WiFiSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D78539832E0AEDB62B2AD65 /* WiFiSetupView.swift */; };
+		9F617028CB7DC81F68E37ECC /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7170A8084DD7CD07C561B00 /* ScannerView.swift */; };
+		A1B2C3D4E5F60718293A4B5C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C3D4E5F60718293A4B5C6D /* SettingsView.swift */; };
+		A18CA83551860CF154588C3C /* PayloadClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0FA83092E28A530825DD40 /* PayloadClassifier.swift */; };
+		A215F21AA8A37F2E2126CB60 /* GlassesFillLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4761317AA64186BC0BB4F6 /* GlassesFillLight.swift */; };
+		A71205D73EE15E49346851F4 /* LabelTextRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE23D838C5F791F0BB83018 /* LabelTextRecognizer.swift */; };
+		B9ADCA5BB27F2834195C54F9 /* PhoneNetworkInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267385DA806C05FCDE9D389F /* PhoneNetworkInfo.swift */; };
+		BADE84E7BD9210BA16B93542 /* CaptureCountdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373E937F15396416665F7A81 /* CaptureCountdown.swift */; };
+		BC375293F44D24F4DC55A50C /* ScanFinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A949E4A74F53568D61E4DD /* ScanFinding.swift */; };
+		BD02B02A77A3162C16E31482 /* gst_ios_init.m in Sources */ = {isa = PBXBuildFile; fileRef = 870EB545AEF22071FE9FD3CA /* gst_ios_init.m */; };
+		BE3F71EE9A28E8BEF9EF396F /* BarcodePayloadNormalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA2902B8931C3E81C98CA4D /* BarcodePayloadNormalizer.swift */; };
+		C05B9488D6E297E55D31702E /* LegacyStreamingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D56FE7CCD578BA0E8B90C9 /* LegacyStreamingView.swift */; };
+		C849DFB68CA860D3CD423FAF /* CascadePayloadClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CFB569317078DF8F5E0D4A /* CascadePayloadClassifier.swift */; };
+		CCA8D4B36AC55380AC5862C7 /* LayaCoreMLPayloadClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68491FE6676D79513CF7652A /* LayaCoreMLPayloadClassifier.swift */; };
+		DB0504BFE78153C2A880210E /* ZoomableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F29544FBC9C00C2AF76E743 /* ZoomableImageView.swift */; };
+		E59538CAD199041880F27A58 /* WiFiSSIDReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8383C1D3FA7A0C81523219BB /* WiFiSSIDReader.swift */; };
+		EA30BE81F2D12ABAA74F9185 /* LiveCaptureTiming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463F4C0F73E5869176FEC1FF /* LiveCaptureTiming.swift */; };
+		F8FAD8D6653B056A61BF27F8 /* ConnectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0375C8F7148B552F84DD0E /* ConnectView.swift */; };
+		FBA3FBF26ADFEDC96584BD17 /* ActivityAnnouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65007FFD6D07020C8A51FC88 /* ActivityAnnouncer.swift */; };
+		FBEC22A859C00C7F6C670D33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BB6BB2B22C04E88AB296019 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		09DF0BF28795581D57FA7DD9 /* MentraQR.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MentraQR.entitlements; sourceTree = "<group>"; };
+		12BEF53419DD6D048932C4C4 /* AppDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDesign.swift; sourceTree = "<group>"; };
+		1BE23D838C5F791F0BB83018 /* LabelTextRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTextRecognizer.swift; sourceTree = "<group>"; };
+		1CC119047111F6DFCFAF2A8F /* MentraSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentraSession.swift; sourceTree = "<group>"; };
+		200A500EE28D3DC0FF15BB0A /* GStreamerWhipReceiver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GStreamerWhipReceiver.h; sourceTree = "<group>"; };
+		24E89B1338D2970CB5612DA0 /* MentraQR.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = MentraQR.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		267385DA806C05FCDE9D389F /* PhoneNetworkInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNetworkInfo.swift; sourceTree = "<group>"; };
+		27D2ADFF29400B912CB42A18 /* MentraQR-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MentraQR-Bridging-Header.h"; sourceTree = "<group>"; };
+		2A4C780E326A624E254731A2 /* CaptureRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureRecord.swift; sourceTree = "<group>"; };
+		2BB6BB2B22C04E88AB296019 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2E4761317AA64186BC0BB4F6 /* GlassesFillLight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassesFillLight.swift; sourceTree = "<group>"; };
+		32CFB569317078DF8F5E0D4A /* CascadePayloadClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CascadePayloadClassifier.swift; sourceTree = "<group>"; };
+		373E937F15396416665F7A81 /* CaptureCountdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureCountdown.swift; sourceTree = "<group>"; };
+		37B5BC0BD4C53AA466387EB7 /* CaptureScanProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureScanProcessor.swift; sourceTree = "<group>"; };
+		3A62DE6066F2F00434C2BE18 /* LabelSnapshotProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelSnapshotProcessor.swift; sourceTree = "<group>"; };
+		44A949E4A74F53568D61E4DD /* ScanFinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanFinding.swift; sourceTree = "<group>"; };
+		463F4C0F73E5869176FEC1FF /* LiveCaptureTiming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCaptureTiming.swift; sourceTree = "<group>"; };
+		4F29544FBC9C00C2AF76E743 /* ZoomableImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomableImageView.swift; sourceTree = "<group>"; };
+		5A63EF580A0EEA8D1056DD3A /* LabelGuideOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelGuideOverlay.swift; sourceTree = "<group>"; };
+		65007FFD6D07020C8A51FC88 /* ActivityAnnouncer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityAnnouncer.swift; sourceTree = "<group>"; };
+		68491FE6676D79513CF7652A /* LayaCoreMLPayloadClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayaCoreMLPayloadClassifier.swift; sourceTree = "<group>"; };
+		6D78539832E0AEDB62B2AD65 /* WiFiSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiSetupView.swift; sourceTree = "<group>"; };
+		70D56FE7CCD578BA0E8B90C9 /* LegacyStreamingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegacyStreamingView.swift; sourceTree = "<group>"; };
+		74FD8FA76ACA69FCF4247D85 /* LocalNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetwork.swift; sourceTree = "<group>"; };
+		7AA6BB6BFF2140011F0E8A4E /* CGImage+JPEG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGImage+JPEG.swift"; sourceTree = "<group>"; };
+		7C0E622C7B69AB7CBB2B8F32 /* gst_ios_init.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gst_ios_init.h; sourceTree = "<group>"; };
+		7EA2902B8931C3E81C98CA4D /* BarcodePayloadNormalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodePayloadNormalizer.swift; sourceTree = "<group>"; };
+		7F0FA83092E28A530825DD40 /* PayloadClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayloadClassifier.swift; sourceTree = "<group>"; };
+		8063D7DF8E5B260B172B0AEF /* PayloadURLShaping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayloadURLShaping.swift; sourceTree = "<group>"; };
+		8383C1D3FA7A0C81523219BB /* WiFiSSIDReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiSSIDReader.swift; sourceTree = "<group>"; };
+		870EB545AEF22071FE9FD3CA /* gst_ios_init.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gst_ios_init.m; sourceTree = "<group>"; };
+		8C8ECDF418E4AB68AC6206AB /* StreamPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamPreviewView.swift; sourceTree = "<group>"; };
+		8FD22C574C8A3FFBC0B46C9C /* VisionFrameScaler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionFrameScaler.swift; sourceTree = "<group>"; };
+		9380AB025B4841008FC5E8DD /* FindingLabelTaxonomy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindingLabelTaxonomy.swift; sourceTree = "<group>"; };
+		9C996382F16EB73AAC03B2F9 /* AdvancedFeaturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedFeaturesView.swift; sourceTree = "<group>"; };
+		9E82C6EBF49A8EB68DE3A5FD /* FrameScanDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameScanDecoder.swift; sourceTree = "<group>"; };
+		A6FA84087103396B67E2B0FB /* CapturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapturesView.swift; sourceTree = "<group>"; };
+		A961E1B2E6B4C2135293870B /* LabelCaptureStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCaptureStore.swift; sourceTree = "<group>"; };
+		AB80B949FCFF7CEBD2AF20B4 /* ScanResultRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanResultRow.swift; sourceTree = "<group>"; };
+		BD183738789FA816913EFD6C /* LabelScanROI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelScanROI.swift; sourceTree = "<group>"; };
+		C33DEC1749FA200127F52385 /* AppDiagnostics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDiagnostics.swift; sourceTree = "<group>"; };
+		C5C6D3B4B86E237B0C7506B0 /* GStreamerWhipReceiver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GStreamerWhipReceiver.m; sourceTree = "<group>"; };
+		CD0375C8F7148B552F84DD0E /* ConnectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectView.swift; sourceTree = "<group>"; };
+		D42C95B213692A1EC3F4A9A1 /* ShippingBarcodeParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingBarcodeParser.swift; sourceTree = "<group>"; };
+		D7170A8084DD7CD07C561B00 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
+		B2C3D4E5F60718293A4B5C6D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		D744F6B8959A0A745027F8C1 /* WiFiMatchBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiMatchBanner.swift; sourceTree = "<group>"; };
+		E1BE42084ABFBE5AD2E14884 /* MentraQRApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentraQRApp.swift; sourceTree = "<group>"; };
+		EA28F679D4BDD9243C461FDE /* LocalPhotoWebhookReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalPhotoWebhookReceiver.swift; sourceTree = "<group>"; };
+		EBF22D952EA05ACF67E87E1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F46D5A778416428CDD405712 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		F47454F29D6753D69E83ADF8 /* CaptureImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureImageProcessor.swift; sourceTree = "<group>"; };
+		F561913479A0DC9CD9562693 /* LabelCaptureLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCaptureLibrary.swift; sourceTree = "<group>"; };
+		F7FC009D13D46E3FB0999F75 /* WhipHeaderProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhipHeaderProxy.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A229C2F9226049E8D8125ADE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16BA411D68B692311340240D /* MentraBluetoothSDK in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0BF3BAE636C2086E1C905057 = {
+			isa = PBXGroup;
+			children = (
+				F9E5DE69628F4AB482B99B74 /* MentraQR */,
+				38C7655F5175C27F1F2D4CBD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		38C7655F5175C27F1F2D4CBD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				24E89B1338D2970CB5612DA0 /* MentraQR.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F9E5DE69628F4AB482B99B74 /* MentraQR */ = {
+			isa = PBXGroup;
+			children = (
+				65007FFD6D07020C8A51FC88 /* ActivityAnnouncer.swift */,
+				9C996382F16EB73AAC03B2F9 /* AdvancedFeaturesView.swift */,
+				12BEF53419DD6D048932C4C4 /* AppDesign.swift */,
+				C33DEC1749FA200127F52385 /* AppDiagnostics.swift */,
+				2BB6BB2B22C04E88AB296019 /* Assets.xcassets */,
+				7EA2902B8931C3E81C98CA4D /* BarcodePayloadNormalizer.swift */,
+				373E937F15396416665F7A81 /* CaptureCountdown.swift */,
+				F47454F29D6753D69E83ADF8 /* CaptureImageProcessor.swift */,
+				2A4C780E326A624E254731A2 /* CaptureRecord.swift */,
+				37B5BC0BD4C53AA466387EB7 /* CaptureScanProcessor.swift */,
+				A6FA84087103396B67E2B0FB /* CapturesView.swift */,
+				32CFB569317078DF8F5E0D4A /* CascadePayloadClassifier.swift */,
+				7AA6BB6BFF2140011F0E8A4E /* CGImage+JPEG.swift */,
+				CD0375C8F7148B552F84DD0E /* ConnectView.swift */,
+				9380AB025B4841008FC5E8DD /* FindingLabelTaxonomy.swift */,
+				9E82C6EBF49A8EB68DE3A5FD /* FrameScanDecoder.swift */,
+				2E4761317AA64186BC0BB4F6 /* GlassesFillLight.swift */,
+				7C0E622C7B69AB7CBB2B8F32 /* gst_ios_init.h */,
+				870EB545AEF22071FE9FD3CA /* gst_ios_init.m */,
+				200A500EE28D3DC0FF15BB0A /* GStreamerWhipReceiver.h */,
+				C5C6D3B4B86E237B0C7506B0 /* GStreamerWhipReceiver.m */,
+				EBF22D952EA05ACF67E87E1B /* Info.plist */,
+				F561913479A0DC9CD9562693 /* LabelCaptureLibrary.swift */,
+				A961E1B2E6B4C2135293870B /* LabelCaptureStore.swift */,
+				5A63EF580A0EEA8D1056DD3A /* LabelGuideOverlay.swift */,
+				BD183738789FA816913EFD6C /* LabelScanROI.swift */,
+				3A62DE6066F2F00434C2BE18 /* LabelSnapshotProcessor.swift */,
+				1BE23D838C5F791F0BB83018 /* LabelTextRecognizer.swift */,
+				68491FE6676D79513CF7652A /* LayaCoreMLPayloadClassifier.swift */,
+				70D56FE7CCD578BA0E8B90C9 /* LegacyStreamingView.swift */,
+				463F4C0F73E5869176FEC1FF /* LiveCaptureTiming.swift */,
+				74FD8FA76ACA69FCF4247D85 /* LocalNetwork.swift */,
+				EA28F679D4BDD9243C461FDE /* LocalPhotoWebhookReceiver.swift */,
+				27D2ADFF29400B912CB42A18 /* MentraQR-Bridging-Header.h */,
+				09DF0BF28795581D57FA7DD9 /* MentraQR.entitlements */,
+				E1BE42084ABFBE5AD2E14884 /* MentraQRApp.swift */,
+				1CC119047111F6DFCFAF2A8F /* MentraSession.swift */,
+				7F0FA83092E28A530825DD40 /* PayloadClassifier.swift */,
+				8063D7DF8E5B260B172B0AEF /* PayloadURLShaping.swift */,
+				267385DA806C05FCDE9D389F /* PhoneNetworkInfo.swift */,
+				F46D5A778416428CDD405712 /* RootView.swift */,
+				44A949E4A74F53568D61E4DD /* ScanFinding.swift */,
+				D7170A8084DD7CD07C561B00 /* ScannerView.swift */,
+				AB80B949FCFF7CEBD2AF20B4 /* ScanResultRow.swift */,
+				B2C3D4E5F60718293A4B5C6D /* SettingsView.swift */,
+				D42C95B213692A1EC3F4A9A1 /* ShippingBarcodeParser.swift */,
+				8C8ECDF418E4AB68AC6206AB /* StreamPreviewView.swift */,
+				8FD22C574C8A3FFBC0B46C9C /* VisionFrameScaler.swift */,
+				F7FC009D13D46E3FB0999F75 /* WhipHeaderProxy.swift */,
+				D744F6B8959A0A745027F8C1 /* WiFiMatchBanner.swift */,
+				6D78539832E0AEDB62B2AD65 /* WiFiSetupView.swift */,
+				8383C1D3FA7A0C81523219BB /* WiFiSSIDReader.swift */,
+				4F29544FBC9C00C2AF76E743 /* ZoomableImageView.swift */,
+			);
+			path = MentraQR;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		508CCF2302DEBDE9044A5143 /* MentraQR */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4197815BF01F131A37BC253 /* Build configuration list for PBXNativeTarget "MentraQR" */;
+			buildPhases = (
+				68F199D0FFEB4DA61B81EA8D /* Install GStreamer iOS SDK */,
+				B63AEA2D104D74306BEFD288 /* Sources */,
+				99960CA49453EBFEDD56C99B /* Resources */,
+				A229C2F9226049E8D8125ADE /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MentraQR;
+			packageProductDependencies = (
+				9A83449230FE663DF28D0B56 /* MentraBluetoothSDK */,
+			);
+			productName = MentraQR;
+			productReference = 24E89B1338D2970CB5612DA0 /* MentraQR.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		64E5819C09A54E29FF085F6B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					508CCF2302DEBDE9044A5143 = {
+						DevelopmentTeam = PPY9K2BYJH;
+					};
+				};
+			};
+			buildConfigurationList = 96E70BBE2D5A132402C17412 /* Build configuration list for PBXProject "MentraQR" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 0BF3BAE636C2086E1C905057;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				E017BEA4101157F924030129 /* XCRemoteSwiftPackageReference "mentra-bluetooth-sdk-ios" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 38C7655F5175C27F1F2D4CBD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				508CCF2302DEBDE9044A5143 /* MentraQR */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		99960CA49453EBFEDD56C99B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBEC22A859C00C7F6C670D33 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		68F199D0FFEB4DA61B81EA8D /* Install GStreamer iOS SDK */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Install GStreamer iOS SDK";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PROJECT_DIR}/scripts/setup-gstreamer-ios.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B63AEA2D104D74306BEFD288 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBA3FBF26ADFEDC96584BD17 /* ActivityAnnouncer.swift in Sources */,
+				26498624A481004D37860008 /* AdvancedFeaturesView.swift in Sources */,
+				48688864413BF73972092E92 /* AppDesign.swift in Sources */,
+				0A09FDE8B653DB776088FC59 /* AppDiagnostics.swift in Sources */,
+				BE3F71EE9A28E8BEF9EF396F /* BarcodePayloadNormalizer.swift in Sources */,
+				057AD0DD4C736698EF866919 /* CGImage+JPEG.swift in Sources */,
+				BADE84E7BD9210BA16B93542 /* CaptureCountdown.swift in Sources */,
+				16BF1B000729959D267894EA /* CaptureImageProcessor.swift in Sources */,
+				1F2FD74C7B5417535CD9436E /* CaptureRecord.swift in Sources */,
+				81D3E8E3A1130B437E56CC68 /* CaptureScanProcessor.swift in Sources */,
+				5B2B509062A563D38B354B7C /* CapturesView.swift in Sources */,
+				C849DFB68CA860D3CD423FAF /* CascadePayloadClassifier.swift in Sources */,
+				F8FAD8D6653B056A61BF27F8 /* ConnectView.swift in Sources */,
+				74D1B44AFA61DDF60D330661 /* FindingLabelTaxonomy.swift in Sources */,
+				58B519C6131C09290B609D77 /* FrameScanDecoder.swift in Sources */,
+				12EC161879B0D9884C3ADF6C /* GStreamerWhipReceiver.m in Sources */,
+				A215F21AA8A37F2E2126CB60 /* GlassesFillLight.swift in Sources */,
+				902C14A7E20C1AD2CC0F1BF2 /* LabelCaptureLibrary.swift in Sources */,
+				5B3D8E23229BD84737EB610C /* LabelCaptureStore.swift in Sources */,
+				5B4F8AB73DDB535955E4225C /* LabelGuideOverlay.swift in Sources */,
+				68D125F10E7F6C2953E78469 /* LabelScanROI.swift in Sources */,
+				2BDE0CCE03AEA00A92E1D0FE /* LabelSnapshotProcessor.swift in Sources */,
+				A71205D73EE15E49346851F4 /* LabelTextRecognizer.swift in Sources */,
+				CCA8D4B36AC55380AC5862C7 /* LayaCoreMLPayloadClassifier.swift in Sources */,
+				C05B9488D6E297E55D31702E /* LegacyStreamingView.swift in Sources */,
+				EA30BE81F2D12ABAA74F9185 /* LiveCaptureTiming.swift in Sources */,
+				76B8B76A320F910E60DD80FE /* LocalNetwork.swift in Sources */,
+				6BD46FFA8131796EE7F3AFDC /* LocalPhotoWebhookReceiver.swift in Sources */,
+				228A09091F1CE0EF0524E701 /* MentraQRApp.swift in Sources */,
+				10C5063A466A49B39716A4BB /* MentraSession.swift in Sources */,
+				A18CA83551860CF154588C3C /* PayloadClassifier.swift in Sources */,
+				8ABF19B460B145608015FA8A /* PayloadURLShaping.swift in Sources */,
+				B9ADCA5BB27F2834195C54F9 /* PhoneNetworkInfo.swift in Sources */,
+				02799BC963F90F71834CC116 /* RootView.swift in Sources */,
+				BC375293F44D24F4DC55A50C /* ScanFinding.swift in Sources */,
+				555859E62AD8FB209E1487AD /* ScanResultRow.swift in Sources */,
+				9F617028CB7DC81F68E37ECC /* ScannerView.swift in Sources */,
+				A1B2C3D4E5F60718293A4B5C /* SettingsView.swift in Sources */,
+				20B43E077C98E372E6460093 /* ShippingBarcodeParser.swift in Sources */,
+				8AE361EA134C0622C3D06FCB /* StreamPreviewView.swift in Sources */,
+				48515F0D0D4076485CE3966B /* VisionFrameScaler.swift in Sources */,
+				3DF8693408EBCBA5CEAAC104 /* WhipHeaderProxy.swift in Sources */,
+				96F0B556D40332C10ADF21BF /* WiFiMatchBanner.swift in Sources */,
+				E59538CAD199041880F27A58 /* WiFiSSIDReader.swift in Sources */,
+				97EB5847879A893335BD0133 /* WiFiSetupView.swift in Sources */,
+				DB0504BFE78153C2A880210E /* ZoomableImageView.swift in Sources */,
+				BD02B02A77A3162C16E31482 /* gst_ios_init.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		90058FEB494BBC223576BEAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MentraQR/MentraQR.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PPY9K2BYJH;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited) \"$(GSTREAMER_ROOT_IOS)\"";
+				GSTREAMER_ROOT_IOS = "$(HOME)/Library/Developer/GStreamer/iPhone.sdk";
+				HEADER_SEARCH_PATHS = "$(inherited) \"$(GSTREAMER_ROOT_IOS)/GStreamer.framework/Headers\"";
+				INFOPLIST_FILE = MentraQR/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "$(inherited) -Wl,-no_compact_unwind -lresolv -liconv -lc++ -lsqlite3 -framework GStreamer -framework CoreFoundation -framework Foundation -framework AVFoundation -framework CoreMedia -framework CoreVideo -framework CoreAudio -framework AudioToolbox -framework AssetsLibrary -weak_framework VideoToolbox -framework OpenGLES -framework QuartzCore -framework UIKit";
+				PRODUCT_BUNDLE_IDENTIFIER = com.local.mentraqr;
+				PRODUCT_NAME = MentraQR;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "MentraQR/MentraQR-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9DA5132FE4FE63D84DE43C66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = PPY9K2BYJH;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		BD1F26F97BB5F0E97AD05B0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = PPY9K2BYJH;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		BED65B30B65B564E0AA1F2D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MentraQR/MentraQR.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PPY9K2BYJH;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited) \"$(GSTREAMER_ROOT_IOS)\"";
+				GSTREAMER_ROOT_IOS = "$(HOME)/Library/Developer/GStreamer/iPhone.sdk";
+				HEADER_SEARCH_PATHS = "$(inherited) \"$(GSTREAMER_ROOT_IOS)/GStreamer.framework/Headers\"";
+				INFOPLIST_FILE = MentraQR/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "$(inherited) -Wl,-no_compact_unwind -lresolv -liconv -lc++ -lsqlite3 -framework GStreamer -framework CoreFoundation -framework Foundation -framework AVFoundation -framework CoreMedia -framework CoreVideo -framework CoreAudio -framework AudioToolbox -framework AssetsLibrary -weak_framework VideoToolbox -framework OpenGLES -framework QuartzCore -framework UIKit";
+				PRODUCT_BUNDLE_IDENTIFIER = com.local.mentraqr;
+				PRODUCT_NAME = MentraQR;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "MentraQR/MentraQR-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		96E70BBE2D5A132402C17412 /* Build configuration list for PBXProject "MentraQR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DA5132FE4FE63D84DE43C66 /* Debug */,
+				BD1F26F97BB5F0E97AD05B0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E4197815BF01F131A37BC253 /* Build configuration list for PBXNativeTarget "MentraQR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90058FEB494BBC223576BEAF /* Debug */,
+				BED65B30B65B564E0AA1F2D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E017BEA4101157F924030129 /* XCRemoteSwiftPackageReference "mentra-bluetooth-sdk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Mentra-Community/mentra-bluetooth-sdk-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9A83449230FE663DF28D0B56 /* MentraBluetoothSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E017BEA4101157F924030129 /* XCRemoteSwiftPackageReference "mentra-bluetooth-sdk-ios" */;
+			productName = MentraBluetoothSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 64E5819C09A54E29FF085F6B /* Project object */;
+}

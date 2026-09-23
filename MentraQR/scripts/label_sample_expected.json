@@ -1,0 +1,37 @@
+[
+  {
+    "file": "fedex_ground.webp",
+    "barcode_raw": "9622001900009621727000272483686596",
+    "carrier": "FedEx",
+    "tracking": "272483686596"
+  },
+  {
+    "file": "fedex_ground_home.webp",
+    "barcode_raw": "9622080430008000257000000000000000",
+    "carrier": "FedEx",
+    "note": "34-digit home barcode; TRK 794666978391 often in PDF417"
+  },
+  {
+    "file": "ups_label.webp",
+    "barcode_raw": "1Z29F6163627360833",
+    "carrier": "UPS",
+    "tracking": "1Z29F6163627360833"
+  },
+  {
+    "file": "usps_priority.webp",
+    "barcode_raw": "42060199\u001d9405511899560754442163",
+    "carrier": "USPS",
+    "tracking": "9405511899560754442163"
+  },
+  {
+    "file": "usps_2day.webp",
+    "barcode_raw": "42095651\u001d9405511899564892820555",
+    "carrier": "USPS",
+    "tracking": "9405511899564892820555"
+  },
+  {
+    "ocr_fedex": "TRK# 2724 8368 6596",
+    "carrier": "FedEx",
+    "tracking": "272483686596"
+  }
+]
