@@ -19,9 +19,28 @@ enum CaptureImageProcessor {
             return encode(trimmed)
         }
 
-        let ui = UIImage(cgImage: cgImage)
-        let trimmed = trimUniformPadding(from: ui.normalizedUpOrientation())
+        let trimmed = trimUniformPadding(from: uprightStreamFrameForJPEG(from: cgImage))
         return encode(trimmed)
+    }
+
+    /// Live WHIP preview is correct as raw BGRA; JPEG export needs a vertical flip baked into pixels.
+    static func uprightStreamFrameForJPEG(from cgImage: CGImage) -> UIImage {
+        let source = UIImage(cgImage: cgImage)
+        let size = CGSize(width: cgImage.width, height: cgImage.height)
+        let format = UIGraphicsImageRendererFormat()
+        format.scale = 1
+        format.opaque = true
+        let renderer = UIGraphicsImageRenderer(size: size, format: format)
+        return renderer.image { context in
+            context.cgContext.translateBy(x: 0, y: size.height)
+            context.cgContext.scaleBy(x: 1, y: -1)
+            source.draw(in: CGRect(origin: .zero, size: size))
+        }
+    }
+
+    /// Matches saved JPEG orientation for the Scan tab “last capture” preview.
+    static func previewImageForStreamFrame(_ cgImage: CGImage) -> UIImage {
+        uprightStreamFrameForJPEG(from: cgImage)
     }
 
     static func imageForDisplay(fileURL: URL) -> UIImage? {

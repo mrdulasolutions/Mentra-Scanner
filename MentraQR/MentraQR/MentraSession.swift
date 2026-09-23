@@ -91,7 +91,7 @@ final class MentraSession: NSObject, ObservableObject, MentraBluetoothSDKDelegat
                 originalJPEG: originalJPEG,
                 labelROI: labelROI
             )
-            self?.lastScanPreviewImage = UIImage(cgImage: image)
+            self?.lastScanPreviewImage = CaptureImageProcessor.previewImageForStreamFrame(image)
             self?.lastScanLabelROI = labelROI
             self?.lastCaptureFindings = findings
             self?.appendDiagnostic("DB: saved stream frame (\(findings.count) parsed fields)")
