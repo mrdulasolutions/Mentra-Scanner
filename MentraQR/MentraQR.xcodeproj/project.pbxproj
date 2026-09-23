@@ -38,6 +38,8 @@
 		96F0B556D40332C10ADF21BF /* WiFiMatchBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D744F6B8959A0A745027F8C1 /* WiFiMatchBanner.swift */; };
 		97EB5847879A893335BD0133 /* WiFiSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D78539832E0AEDB62B2AD65 /* WiFiSetupView.swift */; };
 		9F617028CB7DC81F68E37ECC /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7170A8084DD7CD07C561B00 /* ScannerView.swift */; };
+		E7F8091A2B3C4D5E6F708192 /* ScanPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8091A2B3C4D5E6F708192A /* ScanPreferences.swift */; };
+		F1A2B3C4D5E6F708192A3B /* WHIPFrameOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B3C4D5E6F708192A3B4C /* WHIPFrameOrientation.swift */; };
 		A1B2C3D4E5F60718293A4B5C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C3D4E5F60718293A4B5C6D /* SettingsView.swift */; };
 		A18CA83551860CF154588C3C /* PayloadClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0FA83092E28A530825DD40 /* PayloadClassifier.swift */; };
 		A215F21AA8A37F2E2126CB60 /* GlassesFillLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4761317AA64186BC0BB4F6 /* GlassesFillLight.swift */; };
@@ -104,6 +106,8 @@
 		CD0375C8F7148B552F84DD0E /* ConnectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectView.swift; sourceTree = "<group>"; };
 		D42C95B213692A1EC3F4A9A1 /* ShippingBarcodeParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingBarcodeParser.swift; sourceTree = "<group>"; };
 		D7170A8084DD7CD07C561B00 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
+		F8091A2B3C4D5E6F708192A /* ScanPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanPreferences.swift; sourceTree = "<group>"; };
+		A2B3C4D5E6F708192A3B4C /* WHIPFrameOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WHIPFrameOrientation.swift; sourceTree = "<group>"; };
 		B2C3D4E5F60718293A4B5C6D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D744F6B8959A0A745027F8C1 /* WiFiMatchBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiMatchBanner.swift; sourceTree = "<group>"; };
 		E1BE42084ABFBE5AD2E14884 /* MentraQRApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentraQRApp.swift; sourceTree = "<group>"; };
@@ -190,6 +194,8 @@
 				44A949E4A74F53568D61E4DD /* ScanFinding.swift */,
 				D7170A8084DD7CD07C561B00 /* ScannerView.swift */,
 				AB80B949FCFF7CEBD2AF20B4 /* ScanResultRow.swift */,
+				F8091A2B3C4D5E6F708192A /* ScanPreferences.swift */,
+				A2B3C4D5E6F708192A3B4C /* WHIPFrameOrientation.swift */,
 				B2C3D4E5F60718293A4B5C6D /* SettingsView.swift */,
 				D42C95B213692A1EC3F4A9A1 /* ShippingBarcodeParser.swift */,
 				8C8ECDF418E4AB68AC6206AB /* StreamPreviewView.swift */,
@@ -337,6 +343,8 @@
 				BC375293F44D24F4DC55A50C /* ScanFinding.swift in Sources */,
 				555859E62AD8FB209E1487AD /* ScanResultRow.swift in Sources */,
 				9F617028CB7DC81F68E37ECC /* ScannerView.swift in Sources */,
+				E7F8091A2B3C4D5E6F708192 /* ScanPreferences.swift in Sources */,
+				F1A2B3C4D5E6F708192A3B /* WHIPFrameOrientation.swift in Sources */,
 				A1B2C3D4E5F60718293A4B5C /* SettingsView.swift in Sources */,
 				20B43E077C98E372E6460093 /* ShippingBarcodeParser.swift in Sources */,
 				8AE361EA134C0622C3D06FCB /* StreamPreviewView.swift in Sources */,

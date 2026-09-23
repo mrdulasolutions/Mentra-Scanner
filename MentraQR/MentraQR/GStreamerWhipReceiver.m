@@ -40,51 +40,6 @@ static NSString * const GStreamerWhipReceiverErrorDomain = @"com.local.mentraqr.
 
 static GstFlowReturn on_new_video_sample(GstAppSink *appsink, gpointer user_data);
 
-/// BGRA from appsink is bottom-up for CGImage; flip once so preview, Vision, and JPEG all match.
-static CGImageRef GSCreateVerticallyFlippedCopy(CGImageRef source) {
-    if (!source) {
-        return NULL;
-    }
-    const size_t width = CGImageGetWidth(source);
-    const size_t height = CGImageGetHeight(source);
-    if (width == 0 || height == 0) {
-        return NULL;
-    }
-
-    CGColorSpaceRef colorSpace = CGImageGetColorSpace(source);
-    BOOL releaseColorSpace = NO;
-    if (!colorSpace) {
-        colorSpace = CGColorSpaceCreateDeviceRGB();
-        releaseColorSpace = YES;
-    }
-
-    const CGBitmapInfo bitmapInfo = CGImageGetBitmapInfo(source);
-    const size_t bytesPerRow = CGImageGetBytesPerRow(source);
-    CGContextRef context = CGBitmapContextCreate(
-        NULL,
-        width,
-        height,
-        8,
-        bytesPerRow > 0 ? bytesPerRow : width * 4,
-        colorSpace,
-        bitmapInfo
-    );
-    if (releaseColorSpace) {
-        CGColorSpaceRelease(colorSpace);
-    }
-    if (!context) {
-        return NULL;
-    }
-
-    CGContextTranslateCTM(context, 0, (CGFloat)height);
-    CGContextScaleCTM(context, 1.0, -1.0);
-    CGContextDrawImage(context, CGRectMake(0, 0, (CGFloat)width, (CGFloat)height), source);
-
-    CGImageRef flipped = CGBitmapContextCreateImage(context);
-    CGContextRelease(context);
-    return flipped;
-}
-
 static GstElement *on_request_encoded_filter(GstElement *source,
                                             const gchar *producer_id,
                                             const gchar *pad_name,
@@ -198,6 +153,12 @@ static GstElement *on_request_encoded_filter(GstElement *source,
     self.whipURL = nil;
     self.renderedFrameCount = 0;
     [self notify:@"Receiver stopped"];
+}
+
+- (void)setPreviewImage:(UIImage *)image {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        ((GStreamerVideoContainerView *)self.videoView).image = image;
+    });
 }
 
 - (void)initializeGStreamerOnce {
@@ -349,23 +310,21 @@ static GstElement *on_request_encoded_filter(GstElement *source,
     if (cgImage) {
         NSUInteger frameNumber = self.renderedFrameCount + 1;
         self.renderedFrameCount = frameNumber;
-        CGImageRef upright = GSCreateVerticallyFlippedCopy(cgImage);
+        CGImageRef frameCopy = CGImageCreateCopy(cgImage);
         CGImageRelease(cgImage);
         dispatch_async(dispatch_get_main_queue(), ^{
-            if (!upright) {
+            if (!frameCopy) {
                 return;
             }
-            UIImage *image = [UIImage imageWithCGImage:upright];
-            ((GStreamerVideoContainerView *)self.videoView).image = image;
+            void (^imageHandler)(CGImageRef) = self.onFrameImage;
+            if (imageHandler) {
+                imageHandler(frameCopy);
+            }
             void (^frameHandler)(void) = self.onFrameRendered;
             if (frameHandler) {
                 frameHandler();
             }
-            void (^imageHandler)(CGImageRef) = self.onFrameImage;
-            if (imageHandler) {
-                imageHandler(upright);
-            }
-            CGImageRelease(upright);
+            CGImageRelease(frameCopy);
         });
     }
 

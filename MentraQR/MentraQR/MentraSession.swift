@@ -55,6 +55,7 @@ final class MentraSession: NSObject, ObservableObject, MentraBluetoothSDKDelegat
     let whipReceiver = GStreamerWhipReceiver()
     let frameScanDecoder = FrameScanDecoder()
     let activityAnnouncer = ActivityAnnouncer()
+    @Published var labelOCREnabled = ScanPreferences.labelOCREnabled
 
     private let payloadClassifier: any PayloadClassifying = CascadePayloadClassifier()
     private var payloadClassifyTasks: [String: Task<Void, Never>] = [:]
@@ -114,10 +115,12 @@ final class MentraSession: NSObject, ObservableObject, MentraBluetoothSDKDelegat
                 self?.markPreviewFrame()
             }
         }
-        whipReceiver.onFrameImage = { [weak self] image in
-            Task { @MainActor in
-                self?.frameScanDecoder.process(image)
-            }
+        whipReceiver.onFrameImage = { [weak self] rawFrame in
+            guard let self else { return }
+            guard let upright = WHIPFrameOrientation.normalizedCGImage(from: rawFrame) else { return }
+            let preview = UIImage(cgImage: upright)
+            self.whipReceiver.setPreviewImage(preview)
+            self.frameScanDecoder.process(upright)
         }
         frameScanDecoder.onVisibleSetChanged = { [weak self] findings in
             Task { @MainActor in
@@ -139,6 +142,13 @@ final class MentraSession: NSObject, ObservableObject, MentraBluetoothSDKDelegat
         applyGlassesState(sdk.glasses)
         wasGlassesConnected = sdk.glasses.connected
         applySdkState(sdk.sdkState)
+        frameScanDecoder.setLabelOCREnabled(ScanPreferences.labelOCREnabled)
+    }
+
+    func setLabelOCREnabled(_ enabled: Bool) {
+        ScanPreferences.labelOCREnabled = enabled
+        labelOCREnabled = enabled
+        frameScanDecoder.setLabelOCREnabled(enabled)
     }
 
     deinit {

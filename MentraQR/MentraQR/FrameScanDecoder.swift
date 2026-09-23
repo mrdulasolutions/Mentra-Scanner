@@ -36,6 +36,7 @@ final class FrameScanDecoder: ObservableObject {
     private var lastDebugPublish = Date.distantPast
     private var lastLabelSnapshotTime = Date.distantPast
     private var labelSnapshotInFlight = false
+    private var labelOCREnabled = false
 
     var onVisibleSetChanged: (([ScanFinding]) -> Void)?
     var onNewFinding: ((ScanFinding) -> Void)?
@@ -78,6 +79,18 @@ final class FrameScanDecoder: ObservableObject {
     func cancelPendingAutoCapture() {
         queue.async { [weak self] in
             self?.autoCapturePending = false
+        }
+    }
+
+    func setLabelOCREnabled(_ enabled: Bool) {
+        queue.async { [weak self] in
+            guard let self else { return }
+            labelOCREnabled = enabled
+            if !enabled {
+                ocr.reset()
+                tracking = tracking.filter { $0.value.source != .ocr }
+                publishVisible()
+            }
         }
     }
 
@@ -130,6 +143,7 @@ final class FrameScanDecoder: ObservableObject {
             guard let self else { return }
             pendingSnapshotFrame = image
             detectBarcodes(in: image, at: now)
+            guard labelOCREnabled else { return }
             for ocrFinding in ocr.process(image, labelROI: currentLabelROI, now: now) {
                 ingestOCRFinding(ocrFinding, at: now)
             }
@@ -244,8 +258,9 @@ final class FrameScanDecoder: ObservableObject {
             isStreamSnapshotInFlight = true
         }
 
+        let includeOCR = labelOCREnabled
         queue.async { [weak self] in
-            let result = LabelSnapshotProcessor.analyze(frameCopy, now: now)
+            let result = LabelSnapshotProcessor.analyze(frameCopy, includeOCR: includeOCR, now: now)
             self?.ingestLabelSnapshotFindings(
                 result.findings,
                 frameSize: size,

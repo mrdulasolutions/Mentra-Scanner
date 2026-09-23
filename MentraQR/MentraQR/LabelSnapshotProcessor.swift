@@ -11,12 +11,14 @@ enum LabelSnapshotProcessor {
         let labelROI: CGRect
     }
 
-    static func analyze(_ image: CGImage, now: Date = Date()) -> AnalysisResult {
+    static func analyze(_ image: CGImage, includeOCR: Bool = false, now: Date = Date()) -> AnalysisResult {
         let scaled = VisionFrameScaler.scaledForBarcodeScan(image, minLongEdge: snapshotMinLongEdge)
         var barcodeBoxes: [CGRect] = []
         let qrFindings = detectLabelQRCodes(in: scaled, now: now, boxesOut: &barcodeBoxes)
         let labelROI = LabelScanROI.inferred(from: barcodeBoxes)
-        let ocrFindings = LabelTextRecognizer.snapshotFindings(on: scaled, labelROI: labelROI, now: now)
+        let ocrFindings = includeOCR
+            ? LabelTextRecognizer.snapshotFindings(on: scaled, labelROI: labelROI, now: now)
+            : []
         return AnalysisResult(
             findings: qrFindings + ocrFindings,
             labelROI: labelROI
