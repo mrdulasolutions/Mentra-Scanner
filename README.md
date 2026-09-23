@@ -1,5 +1,9 @@
 # Mentra Scanner
 
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/mrdulasolutions/Mentra-Scanner/blob/main/LICENSE) [![iOS 16+](https://img.shields.io/badge/iOS-16%2B-lightgrey.svg)](https://github.com/mrdulasolutions/Mentra-Scanner) [![Mentra Bluetooth SDK 3.1.1](https://img.shields.io/badge/Mentra%20Bluetooth%20SDK-3.1.1-blue.svg)](https://docs.mentraglass.com/bluetooth-sdk/overview) [![Wiki](https://img.shields.io/badge/Wiki-docs-blue.svg)](https://github.com/mrdulasolutions/Mentra-Scanner/wiki)
+
+**Start here:** Open the [wiki home](https://github.com/mrdulasolutions/Mentra-Scanner/wiki) and read in order—[New to Mentra](https://github.com/mrdulasolutions/Mentra-Scanner/wiki/New-to-Mentra), [Using the app](https://github.com/mrdulasolutions/Mentra-Scanner/wiki/Using-the-app), [Running the project](https://github.com/mrdulasolutions/Mentra-Scanner/wiki/Running-the-project), [How scanning works](https://github.com/mrdulasolutions/Mentra-Scanner/wiki/How-scanning-works), [Build your own app](https://github.com/mrdulasolutions/Mentra-Scanner/wiki/Build-your-own-app).
+
 Mentra Scanner is an iPhone app for **Mentra Live** glasses. It pairs over Bluetooth, pulls live video over Wi‑Fi (WHIP/WebRTC), and saves frames when a QR code or shipping barcode stays steady in view. Parsed label fields land on your phone as JPEG files and SQLite records. This is an independent app—not an official Mentra product.
 
 ---
@@ -45,6 +49,14 @@ Pick your **Development Team** in Xcode (or set `developmentTeam` in `MentraQR/p
 ## What happens when you scan
 
 The phone listens for the glasses’ live video. When a code sits still in the guide, the app grabs that frame, reads the barcode (and label text, if you turned that on in Settings), and saves a JPEG plus the parsed fields. The stream stays up the whole time. You are not pausing for a separate photo.
+
+```mermaid
+flowchart LR
+    Glasses --> PhoneWiFi["Phone Wi-Fi"]
+    PhoneWiFi --> LiveFrame["Live frame"]
+    LiveFrame --> ReadCode["Read code"]
+    ReadCode --> SaveJPEG["Save JPEG"]
+```
 
 Those images and fields stay on the phone. Nothing is uploaded unless you add that later.
 
