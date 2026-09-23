@@ -19,8 +19,7 @@ enum CaptureImageProcessor {
             return encode(trimmed)
         }
 
-        let ui = UIImage(cgImage: cgImage)
-        let trimmed = trimUniformPadding(from: ui.normalizedUpOrientation())
+        let trimmed = trimUniformPadding(from: UIImage(cgImage: cgImage))
         return encode(trimmed)
     }
 
