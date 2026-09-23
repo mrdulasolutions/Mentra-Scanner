@@ -115,12 +115,10 @@ final class MentraSession: NSObject, ObservableObject, MentraBluetoothSDKDelegat
                 self?.markPreviewFrame()
             }
         }
-        whipReceiver.onFrameImage = { [weak self] rawFrame in
-            guard let self else { return }
-            guard let upright = WHIPFrameOrientation.normalizedCGImage(from: rawFrame) else { return }
-            let preview = UIImage(cgImage: upright)
-            self.whipReceiver.setPreviewImage(preview)
-            self.frameScanDecoder.process(upright)
+        whipReceiver.onFrameImage = { [weak self] image in
+            Task { @MainActor in
+                self?.frameScanDecoder.process(image)
+            }
         }
         frameScanDecoder.onVisibleSetChanged = { [weak self] findings in
             Task { @MainActor in

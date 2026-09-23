@@ -38,10 +38,8 @@
 		96F0B556D40332C10ADF21BF /* WiFiMatchBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D744F6B8959A0A745027F8C1 /* WiFiMatchBanner.swift */; };
 		97EB5847879A893335BD0133 /* WiFiSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D78539832E0AEDB62B2AD65 /* WiFiSetupView.swift */; };
 		9F617028CB7DC81F68E37ECC /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7170A8084DD7CD07C561B00 /* ScannerView.swift */; };
-		E7F8091A2B3C4D5E6F708192 /* ScanPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8091A2B3C4D5E6F708192A /* ScanPreferences.swift */; };
-		F1A2B3C4D5E6F708192A3B /* WHIPFrameOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B3C4D5E6F708192A3B4C /* WHIPFrameOrientation.swift */; };
-		A1B2C3D4E5F60718293A4B5C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C3D4E5F60718293A4B5C6D /* SettingsView.swift */; };
 		A18CA83551860CF154588C3C /* PayloadClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0FA83092E28A530825DD40 /* PayloadClassifier.swift */; };
+		A1B2C3D4E5F60718293A4B5C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C3D4E5F60718293A4B5C6D /* SettingsView.swift */; };
 		A215F21AA8A37F2E2126CB60 /* GlassesFillLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4761317AA64186BC0BB4F6 /* GlassesFillLight.swift */; };
 		A71205D73EE15E49346851F4 /* LabelTextRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE23D838C5F791F0BB83018 /* LabelTextRecognizer.swift */; };
 		B9ADCA5BB27F2834195C54F9 /* PhoneNetworkInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267385DA806C05FCDE9D389F /* PhoneNetworkInfo.swift */; };
@@ -54,6 +52,7 @@
 		CCA8D4B36AC55380AC5862C7 /* LayaCoreMLPayloadClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68491FE6676D79513CF7652A /* LayaCoreMLPayloadClassifier.swift */; };
 		DB0504BFE78153C2A880210E /* ZoomableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F29544FBC9C00C2AF76E743 /* ZoomableImageView.swift */; };
 		E59538CAD199041880F27A58 /* WiFiSSIDReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8383C1D3FA7A0C81523219BB /* WiFiSSIDReader.swift */; };
+		E7F8091A2B3C4D5E6F708192 /* ScanPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8091A2B3C4D5E6F708192A /* ScanPreferences.swift */; };
 		EA30BE81F2D12ABAA74F9185 /* LiveCaptureTiming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463F4C0F73E5869176FEC1FF /* LiveCaptureTiming.swift */; };
 		F8FAD8D6653B056A61BF27F8 /* ConnectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0375C8F7148B552F84DD0E /* ConnectView.swift */; };
 		FBA3FBF26ADFEDC96584BD17 /* ActivityAnnouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65007FFD6D07020C8A51FC88 /* ActivityAnnouncer.swift */; };
@@ -100,15 +99,13 @@
 		A6FA84087103396B67E2B0FB /* CapturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapturesView.swift; sourceTree = "<group>"; };
 		A961E1B2E6B4C2135293870B /* LabelCaptureStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCaptureStore.swift; sourceTree = "<group>"; };
 		AB80B949FCFF7CEBD2AF20B4 /* ScanResultRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanResultRow.swift; sourceTree = "<group>"; };
+		B2C3D4E5F60718293A4B5C6D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		BD183738789FA816913EFD6C /* LabelScanROI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelScanROI.swift; sourceTree = "<group>"; };
 		C33DEC1749FA200127F52385 /* AppDiagnostics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDiagnostics.swift; sourceTree = "<group>"; };
 		C5C6D3B4B86E237B0C7506B0 /* GStreamerWhipReceiver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GStreamerWhipReceiver.m; sourceTree = "<group>"; };
 		CD0375C8F7148B552F84DD0E /* ConnectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectView.swift; sourceTree = "<group>"; };
 		D42C95B213692A1EC3F4A9A1 /* ShippingBarcodeParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingBarcodeParser.swift; sourceTree = "<group>"; };
 		D7170A8084DD7CD07C561B00 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
-		F8091A2B3C4D5E6F708192A /* ScanPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanPreferences.swift; sourceTree = "<group>"; };
-		A2B3C4D5E6F708192A3B4C /* WHIPFrameOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WHIPFrameOrientation.swift; sourceTree = "<group>"; };
-		B2C3D4E5F60718293A4B5C6D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D744F6B8959A0A745027F8C1 /* WiFiMatchBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiMatchBanner.swift; sourceTree = "<group>"; };
 		E1BE42084ABFBE5AD2E14884 /* MentraQRApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentraQRApp.swift; sourceTree = "<group>"; };
 		EA28F679D4BDD9243C461FDE /* LocalPhotoWebhookReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalPhotoWebhookReceiver.swift; sourceTree = "<group>"; };
@@ -117,6 +114,7 @@
 		F47454F29D6753D69E83ADF8 /* CaptureImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureImageProcessor.swift; sourceTree = "<group>"; };
 		F561913479A0DC9CD9562693 /* LabelCaptureLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCaptureLibrary.swift; sourceTree = "<group>"; };
 		F7FC009D13D46E3FB0999F75 /* WhipHeaderProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhipHeaderProxy.swift; sourceTree = "<group>"; };
+		F8091A2B3C4D5E6F708192A /* ScanPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanPreferences.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,7 +193,6 @@
 				D7170A8084DD7CD07C561B00 /* ScannerView.swift */,
 				AB80B949FCFF7CEBD2AF20B4 /* ScanResultRow.swift */,
 				F8091A2B3C4D5E6F708192A /* ScanPreferences.swift */,
-				A2B3C4D5E6F708192A3B4C /* WHIPFrameOrientation.swift */,
 				B2C3D4E5F60718293A4B5C6D /* SettingsView.swift */,
 				D42C95B213692A1EC3F4A9A1 /* ShippingBarcodeParser.swift */,
 				8C8ECDF418E4AB68AC6206AB /* StreamPreviewView.swift */,
@@ -344,7 +341,6 @@
 				555859E62AD8FB209E1487AD /* ScanResultRow.swift in Sources */,
 				9F617028CB7DC81F68E37ECC /* ScannerView.swift in Sources */,
 				E7F8091A2B3C4D5E6F708192 /* ScanPreferences.swift in Sources */,
-				F1A2B3C4D5E6F708192A3B /* WHIPFrameOrientation.swift in Sources */,
 				A1B2C3D4E5F60718293A4B5C /* SettingsView.swift in Sources */,
 				20B43E077C98E372E6460093 /* ShippingBarcodeParser.swift in Sources */,
 				8AE361EA134C0622C3D06FCB /* StreamPreviewView.swift in Sources */,
@@ -369,13 +365,55 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PPY9K2BYJH;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited) \"$(GSTREAMER_ROOT_IOS)\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(GSTREAMER_ROOT_IOS)\"",
+				);
 				GSTREAMER_ROOT_IOS = "$(HOME)/Library/Developer/GStreamer/iPhone.sdk";
-				HEADER_SEARCH_PATHS = "$(inherited) \"$(GSTREAMER_ROOT_IOS)/GStreamer.framework/Headers\"";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(GSTREAMER_ROOT_IOS)/GStreamer.framework/Headers\"",
+				);
 				INFOPLIST_FILE = MentraQR/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
-				OTHER_LDFLAGS = "$(inherited) -Wl,-no_compact_unwind -lresolv -liconv -lc++ -lsqlite3 -framework GStreamer -framework CoreFoundation -framework Foundation -framework AVFoundation -framework CoreMedia -framework CoreVideo -framework CoreAudio -framework AudioToolbox -framework AssetsLibrary -weak_framework VideoToolbox -framework OpenGLES -framework QuartzCore -framework UIKit";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-Wl,-no_compact_unwind",
+					"-lresolv",
+					"-liconv",
+					"-lc++",
+					"-lsqlite3",
+					"-framework",
+					GStreamer,
+					"-framework",
+					CoreFoundation,
+					"-framework",
+					Foundation,
+					"-framework",
+					AVFoundation,
+					"-framework",
+					CoreMedia,
+					"-framework",
+					CoreVideo,
+					"-framework",
+					CoreAudio,
+					"-framework",
+					AudioToolbox,
+					"-framework",
+					AssetsLibrary,
+					"-weak_framework",
+					VideoToolbox,
+					"-framework",
+					OpenGLES,
+					"-framework",
+					QuartzCore,
+					"-framework",
+					UIKit,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.local.mentraqr;
 				PRODUCT_NAME = MentraQR;
 				SDKROOT = iphoneos;
@@ -515,13 +553,55 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PPY9K2BYJH;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited) \"$(GSTREAMER_ROOT_IOS)\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(GSTREAMER_ROOT_IOS)\"",
+				);
 				GSTREAMER_ROOT_IOS = "$(HOME)/Library/Developer/GStreamer/iPhone.sdk";
-				HEADER_SEARCH_PATHS = "$(inherited) \"$(GSTREAMER_ROOT_IOS)/GStreamer.framework/Headers\"";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(GSTREAMER_ROOT_IOS)/GStreamer.framework/Headers\"",
+				);
 				INFOPLIST_FILE = MentraQR/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
-				OTHER_LDFLAGS = "$(inherited) -Wl,-no_compact_unwind -lresolv -liconv -lc++ -lsqlite3 -framework GStreamer -framework CoreFoundation -framework Foundation -framework AVFoundation -framework CoreMedia -framework CoreVideo -framework CoreAudio -framework AudioToolbox -framework AssetsLibrary -weak_framework VideoToolbox -framework OpenGLES -framework QuartzCore -framework UIKit";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-Wl,-no_compact_unwind",
+					"-lresolv",
+					"-liconv",
+					"-lc++",
+					"-lsqlite3",
+					"-framework",
+					GStreamer,
+					"-framework",
+					CoreFoundation,
+					"-framework",
+					Foundation,
+					"-framework",
+					AVFoundation,
+					"-framework",
+					CoreMedia,
+					"-framework",
+					CoreVideo,
+					"-framework",
+					CoreAudio,
+					"-framework",
+					AudioToolbox,
+					"-framework",
+					AssetsLibrary,
+					"-weak_framework",
+					VideoToolbox,
+					"-framework",
+					OpenGLES,
+					"-framework",
+					QuartzCore,
+					"-framework",
+					UIKit,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.local.mentraqr;
 				PRODUCT_NAME = MentraQR;
 				SDKROOT = iphoneos;

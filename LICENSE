@@ -1,20 +1,7 @@
+Mentra Scanner — original work in this repository
+Copyright 2026 M.R. Dula Enterprise, LLC
 
-================================================================================
-MENTRA SCANNER — COPYRIGHT SCOPE
-================================================================================
-
-This file is the Apache License, Version 2.0, and applies to ORIGINAL WORK
-in this repository that is Copyright 2026 M.R. Dula Enterprise, LLC.
-
-It does NOT apply to third-party components (Mentra Bluetooth SDK, GStreamer,
-Apple frameworks, etc.). Those remain under their own licenses. See:
-
-  - LICENSING.md
-  - NOTICE
-  - THIRD_PARTY_LICENSES.md
-
-================================================================================
-
+Third-party components are not covered here; see NOTICE.
 
                                  Apache License
                            Version 2.0, January 2004

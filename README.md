@@ -2,8 +2,7 @@
 
 **Mentra Scanner** is an iPhone app for **Mentra Live** smart glasses. It connects over Bluetooth, receives live video over **Wi‑Fi (WHIP/WebRTC)**, and automatically saves **stream frames** when QR codes and shipping barcodes sit in view—plus parsed label fields—on device.
 
-**Copyright:** Original code and docs in this repo — [M.R. Dula Enterprise, LLC](LICENSE) ([Apache 2.0](LICENSE)).  
-**Third parties:** Mentra Bluetooth SDK (Apache 2.0), GStreamer (LGPL), Apple SDKs — see [LICENSING.md](LICENSING.md) and [NOTICE](NOTICE). Mentra Scanner is an independent app, not an official Mentra product.
+**Copyright:** Original code and docs — [M.R. Dula Enterprise, LLC](LICENSE) ([Apache 2.0](LICENSE)). Third-party attributions: [NOTICE](NOTICE). Mentra Scanner is an independent app, not an official Mentra product.
 
 ---
 
@@ -67,7 +66,7 @@ The phone runs a local **WHIP receiver** (GStreamer + header proxy). The Mentra 
 
 ```
 .
-├── LICENSE / NOTICE / LICENSING.md / THIRD_PARTY_LICENSES.md
+├── LICENSE / NOTICE
 ├── README.md                 # You are here
 ├── DEVELOPER.md              # Build, debug, conventions
 ├── SDK.md                    # Mentra SDK + our bolt-ons
@@ -81,6 +80,23 @@ The phone runs a local **WHIP receiver** (GStreamer + header proxy). The Mentra 
 
 ---
 
+## Legal
+
+| | |
+|---|---|
+| **This repository** | [Apache License 2.0](LICENSE) — M.R. Dula Enterprise, LLC |
+| **Attributions** | [NOTICE](NOTICE) (required for redistribution) |
+
+**Third-party components** (separate licenses; summarized in NOTICE):
+
+- **Mentra Bluetooth SDK** — Swift Package at build time ([Apache 2.0](https://github.com/Mentra-Community/mentra-bluetooth-sdk-ios/blob/main/LICENSE)); pin in `MentraQR/project.yml`
+- **GStreamer** — installed by `MentraQR/scripts/setup-gstreamer-ios.sh`, statically linked ([LGPL](https://gstreamer.freedesktop.org/documentation/frequently-asked-questions/licensing.html)); LGPL obligations apply when you **distribute** a binary
+- **Apple iOS SDK** — system frameworks; Apple Developer Program terms
+
+Optional repo-only references (e.g. Laya eval scripts) are noted in NOTICE. Trademarks: “Mentra” and “Mentra Live” belong to their respective owners; use only to describe compatibility.
+
+---
+
 ## Privacy
 
 Scan images and parsed fields are stored **locally** in the app’s Application Support directory. Nothing is uploaded by default.
@@ -91,4 +107,4 @@ Scan images and parsed fields are stored **locally** in the app’s Application 
 
 - Bugs and features: use your team’s issue tracker (GitHub Issues when this repo is published).
 - See [DEVELOPER.md](DEVELOPER.md) for logging, scripts, and code map.
-- External SDKs: [NOTICE](NOTICE).
+- Licensing: [LICENSE](LICENSE) · [NOTICE](NOTICE).

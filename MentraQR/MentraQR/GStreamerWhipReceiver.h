@@ -16,9 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
                           error:(NSError **)error;
 - (void)stop;
 
-/// Main queue. Live preview UIImage (already oriented for UIKit).
-- (void)setPreviewImage:(UIImage *)image;
-
 @end
 
 NS_ASSUME_NONNULL_END

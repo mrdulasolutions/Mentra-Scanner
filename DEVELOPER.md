@@ -2,7 +2,7 @@
 
 This document is for engineers building, extending, or shipping **Mentra Scanner**. User-facing steps live in [README.md](README.md). Mentra-specific integration is in [SDK.md](SDK.md).
 
-**License:** Our original work — Apache 2.0 — **M.R. Dula Enterprise, LLC** ([LICENSE](LICENSE)). Third-party terms: [LICENSING.md](LICENSING.md).
+**License:** Our original work — Apache 2.0 — **M.R. Dula Enterprise, LLC** ([LICENSE](LICENSE)). Third-party attributions and distribution notes: [NOTICE](NOTICE); overview in [README.md § Legal](README.md#legal).
 
 ---
 
@@ -183,7 +183,7 @@ Not fully wired in-repo yet; recommended:
 
 1. `xcodebuild -scheme MentraQR -destination 'generic/platform=iOS' build` on Mac runner with GStreamer SDK preinstalled.
 2. Archive with production bundle ID and team.
-3. Attach **NOTICE** + third-party compliance for GStreamer LGPL static linking (legal review).
+3. Ship [NOTICE](NOTICE) with the binary; record the GStreamer SDK version used in CI and satisfy LGPL static-linking obligations (legal review).
 
 ---
 

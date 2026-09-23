@@ -19,8 +19,8 @@ enum CaptureImageProcessor {
             return encode(trimmed)
         }
 
-        // Frames from WHIP are normalized in MentraSession before decode/snapshot.
-        let trimmed = trimUniformPadding(from: UIImage(cgImage: cgImage))
+        let ui = UIImage(cgImage: cgImage)
+        let trimmed = trimUniformPadding(from: ui.normalizedUpOrientation())
         return encode(trimmed)
     }
 
